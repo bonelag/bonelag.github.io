@@ -1,118 +1,339 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Trang cá nhân của BoneLag - Frontend Developer xây dựng trải nghiệm web đẹp và hiệu quả."
-    />
-    <title>BoneLag | Personal Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bonelag - Creative Developer & Designer. Personal portfolio showcasing projects and skills.">
+    <title>Bonelag | Creative Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="bg-glow bg-glow--1"></div>
-    <div class="bg-glow bg-glow--2"></div>
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <header class="header">
-      <a class="brand" href="#top">BoneLag</a>
-      <button class="menu-btn" id="menuBtn" aria-label="Mở menu điều hướng">☰</button>
-      <nav class="nav" id="navMenu">
-        <a href="#about">Giới thiệu</a>
-        <a href="#projects">Dự án</a>
-        <a href="#skills">Kỹ năng</a>
-        <a href="#contact">Liên hệ</a>
-      </nav>
-    </header>
+<body>
 
-    <main id="top">
-      <section class="hero section reveal">
-        <p class="eyebrow">👋 Xin chào, mình là</p>
-        <h1>BoneLag — Developer tạo sản phẩm web có cảm xúc.</h1>
-        <p class="hero-text">
-          Mình tập trung vào trải nghiệm người dùng, hiệu năng và thiết kế sạch để biến ý tưởng thành sản phẩm thực tế.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Xem dự án</a>
-          <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noreferrer"
-            >GitHub của mình</a
-          >
+    <!-- Navigation -->
+    <nav id="main-nav" class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">B</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <ul class="quick-stats">
-          <li><strong>20+</strong><span>Dự án hoàn thành</span></li>
-          <li><strong>3 năm</strong><span>Kinh nghiệm code</span></li>
-          <li><strong>99%</strong><span>Đam mê sản phẩm</span></li>
-        </ul>
-      </section>
+    </nav>
 
-      <section class="section reveal" id="about">
-        <h2>Giới thiệu</h2>
-        <p>
-          Mình là lập trình viên web yêu thích xây dựng các sản phẩm có giao diện tinh gọn, chuyển động mượt và logic rõ ràng.
-          Mục tiêu của mình là tạo ra những trải nghiệm “nhanh - đẹp - dễ dùng”.
-        </p>
-      </section>
-
-      <section class="section reveal" id="projects">
-        <div class="section-head">
-          <h2>Dự án nổi bật</h2>
-          <a href="https://github.com" target="_blank" rel="noreferrer">Xem tất cả →</a>
+    <!-- Hero Section with Anime.js Grid Animation -->
+    <section id="hero" class="hero-section">
+        <div id="dot-grid" class="dot-grid-container"></div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="tag-dot"></span>
+                <span class="tag-text">Available for work</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">
+                    <span class="title-word" data-animate="word">Hi, I'm</span>
+                </span>
+                <span class="title-line">
+                    <span class="title-highlight" data-animate="word">Bonelag</span>
+                </span>
+            </h1>
+            <p class="hero-subtitle" data-animate="fade">
+                Creative Developer & Designer crafting
+                <span class="text-gradient">digital experiences</span>
+                that inspire.
+            </p>
+            <div class="hero-cta" data-animate="fade">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-animate="fade">
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Years Exp.</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="20">0</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-label">% Passion</span>
+                </div>
+            </div>
         </div>
-        <div class="cards">
-          <article class="card">
-            <p class="tag">Web App</p>
-            <h3>TaskFlow</h3>
-            <p>Nền tảng quản lý công việc nhóm với dashboard realtime và trải nghiệm kéo-thả trực quan.</p>
-            <a href="https://github.com" target="_blank" rel="noreferrer">Chi tiết</a>
-          </article>
-          <article class="card">
-            <p class="tag">UI/UX</p>
-            <h3>Showcase Portfolio</h3>
-            <p>Bộ giao diện portfolio tối giản tập trung vào storytelling và khả năng tùy biến cao.</p>
-            <a href="https://github.com" target="_blank" rel="noreferrer">Chi tiết</a>
-          </article>
-          <article class="card">
-            <p class="tag">Frontend</p>
-            <h3>ShopLite</h3>
-            <p>Website bán hàng với tốc độ tải nhanh, tối ưu SEO và thanh toán liền mạch.</p>
-            <a href="https://github.com" target="_blank" rel="noreferrer">Chi tiết</a>
-          </article>
+        <div class="scroll-indicator" data-animate="fade">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
         </div>
-      </section>
+    </section>
 
-      <section class="section reveal" id="skills">
-        <h2>Kỹ năng</h2>
-        <div class="chips">
-          <span>HTML5</span>
-          <span>CSS3 / SCSS</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>TypeScript</span>
-          <span>Node.js</span>
-          <span>UI Motion</span>
-          <span>Performance</span>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header" data-scroll-animate>
+                <span class="section-tag">01</span>
+                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+            </div>
+            <div class="about-grid" data-scroll-animate>
+                <div class="about-text">
+                    <p class="about-intro">I'm a passionate developer who loves turning ideas into reality through clean
+                        code and beautiful design.</p>
+                    <p>With a focus on creating immersive digital experiences, I blend creativity with technical
+                        expertise. Every project is an opportunity to push boundaries and deliver something
+                        extraordinary.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, experimenting with design
+                        systems, or contributing to open-source projects.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <h3>My Philosophy</h3>
+                        <p>"Code is poetry — every line should tell a story, and every pixel should have purpose."</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="section contact reveal" id="contact">
-        <h2>Cùng nhau tạo thứ gì đó tuyệt vời?</h2>
-        <p>
-          Nếu bạn muốn hợp tác cho một dự án mới hoặc chỉ đơn giản là kết nối, cứ nhắn mình nhé.
-        </p>
-        <a class="btn btn-primary" href="mailto:you@example.com">Gửi email</a>
-      </section>
-    </main>
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header" data-scroll-animate>
+                <span class="section-tag">02</span>
+                <h2 class="section-title">My <span class="text-gradient">Skills</span></h2>
+            </div>
+            <div class="skills-grid" data-scroll-animate>
+                <div class="skill-card" data-skill="frontend">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3>Frontend</h3>
+                    <p>HTML, CSS, JavaScript, React, Vue.js</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="backend">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Backend</h3>
+                    <p>Node.js, Python, C++, Rust</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="design">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                        </svg>
+                    </div>
+                    <h3>Tools & DevOps</h3>
+                    <p>Git, Docker, Linux, CI/CD</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card" data-skill="creative">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z" />
+                        </svg>
+                    </div>
+                    <h3>Creative</h3>
+                    <p>UI/UX Design, Animation, 3D</p>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="75"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header" data-scroll-animate>
+                <span class="section-tag">03</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+            </div>
+            <div class="projects-grid" data-scroll-animate>
+                <div class="project-card project-large">
+                    <div class="project-visual">
+                        <div class="project-pattern" data-pattern="1"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Web Application</span>
+                        <h3>Project Alpha</h3>
+                        <p>A modern web application built with cutting-edge technologies for seamless user experience.
+                        </p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            View Project
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-pattern" data-pattern="2"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Desktop App</span>
+                        <h3>System Tools</h3>
+                        <p>High-performance system utilities written in C++ and Rust.</p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>Rust</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            View Project
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-pattern" data-pattern="3"></div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-tag">Open Source</span>
+                        <h3>Dev Toolkit</h3>
+                        <p>A collection of developer tools and automation scripts.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Shell</span>
+                        </div>
+                        <a href="#" class="project-link">
+                            View Project
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-scroll-animate>
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Get in <span class="text-gradient">Touch</span></h2>
+            </div>
+            <div class="contact-content" data-scroll-animate>
+                <p class="contact-intro">Have a project in mind or just want to say hello? I'd love to hear from you.
+                </p>
+                <div class="contact-links">
+                    <a href="https://github.com/bonelag" target="_blank" class="contact-card" id="github-link">
+                        <div class="contact-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">@bonelag</span>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@bonelag.dev" class="contact-card" id="email-link">
+                        <div class="contact-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">hello@bonelag.dev</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-      <p>© 2026 BoneLag. Made with passion.</p>
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-logo">
+                    <span class="logo-bracket">{</span>
+                    <span class="logo-text">Bonelag</span>
+                    <span class="logo-bracket">}</span>
+                </span>
+                <p>&copy; 2026 Bonelag. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Anime.js CDN (v3.2.2 for broader compatibility) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
