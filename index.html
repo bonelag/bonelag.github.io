@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trang cá nhân của BoneLag - Frontend Developer xây dựng trải nghiệm web đẹp và hiệu quả."
+    />
+    <title>BoneLag | Personal Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+
+    <header class="header">
+      <a class="brand" href="#top">BoneLag</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Mở menu điều hướng">☰</button>
+      <nav class="nav" id="navMenu">
+        <a href="#about">Giới thiệu</a>
+        <a href="#projects">Dự án</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section reveal">
+        <p class="eyebrow">👋 Xin chào, mình là</p>
+        <h1>BoneLag — Developer tạo sản phẩm web có cảm xúc.</h1>
+        <p class="hero-text">
+          Mình tập trung vào trải nghiệm người dùng, hiệu năng và thiết kế sạch để biến ý tưởng thành sản phẩm thực tế.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">Xem dự án</a>
+          <a class="btn btn-ghost" href="https://github.com" target="_blank" rel="noreferrer"
+            >GitHub của mình</a
+          >
+        </div>
+        <ul class="quick-stats">
+          <li><strong>20+</strong><span>Dự án hoàn thành</span></li>
+          <li><strong>3 năm</strong><span>Kinh nghiệm code</span></li>
+          <li><strong>99%</strong><span>Đam mê sản phẩm</span></li>
+        </ul>
+      </section>
+
+      <section class="section reveal" id="about">
+        <h2>Giới thiệu</h2>
+        <p>
+          Mình là lập trình viên web yêu thích xây dựng các sản phẩm có giao diện tinh gọn, chuyển động mượt và logic rõ ràng.
+          Mục tiêu của mình là tạo ra những trải nghiệm “nhanh - đẹp - dễ dùng”.
+        </p>
+      </section>
+
+      <section class="section reveal" id="projects">
+        <div class="section-head">
+          <h2>Dự án nổi bật</h2>
+          <a href="https://github.com" target="_blank" rel="noreferrer">Xem tất cả →</a>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <p class="tag">Web App</p>
+            <h3>TaskFlow</h3>
+            <p>Nền tảng quản lý công việc nhóm với dashboard realtime và trải nghiệm kéo-thả trực quan.</p>
+            <a href="https://github.com" target="_blank" rel="noreferrer">Chi tiết</a>
+          </article>
+          <article class="card">
+            <p class="tag">UI/UX</p>
+            <h3>Showcase Portfolio</h3>
+            <p>Bộ giao diện portfolio tối giản tập trung vào storytelling và khả năng tùy biến cao.</p>
+            <a href="https://github.com" target="_blank" rel="noreferrer">Chi tiết</a>
+          </article>
+          <article class="card">
+            <p class="tag">Frontend</p>
+            <h3>ShopLite</h3>
+            <p>Website bán hàng với tốc độ tải nhanh, tối ưu SEO và thanh toán liền mạch.</p>
+            <a href="https://github.com" target="_blank" rel="noreferrer">Chi tiết</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="skills">
+        <h2>Kỹ năng</h2>
+        <div class="chips">
+          <span>HTML5</span>
+          <span>CSS3 / SCSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Node.js</span>
+          <span>UI Motion</span>
+          <span>Performance</span>
+        </div>
+      </section>
+
+      <section class="section contact reveal" id="contact">
+        <h2>Cùng nhau tạo thứ gì đó tuyệt vời?</h2>
+        <p>
+          Nếu bạn muốn hợp tác cho một dự án mới hoặc chỉ đơn giản là kết nối, cứ nhắn mình nhé.
+        </p>
+        <a class="btn btn-primary" href="mailto:you@example.com">Gửi email</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 BoneLag. Made with passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
